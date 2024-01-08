@@ -68,14 +68,47 @@ export default{
             {
                 icon: "/footer-youtube.png"
             }
+        ],
+        bonus:[
+            {
+                icon_buy: "/buy-comics-digital-comics.png",
+                testo: "DIGITAL COMICS"
+            },
+            {
+                icon_buy: "/buy-comics-merchandise.png",
+                testo: "DC MERCHANDISE"
+            },
+            {
+                icon_buy: "/buy-comics-subscriptions.png",
+                testo: "SUBSCRIPTION"
+            },
+            {
+                icon_buy: "/buy-comics-shop-locator.png",
+                testo: "COMIC SHOP LOCATOR"
+            },
+            {
+                icon_buy: "/buy-dc-power-visa.svg",
+                testo: "DC POWER VISA"
+            },
         ]
-
         }
       }
     }
 
 </script>
 <template lang="">
+    <div class="sfondo-azzurrino">
+        <div class="container">
+
+            <div class="d-flex" >
+                
+                    <ul> 
+                        <li v-for= "(icon ,index) in bonus" :key="index" ><img class="mx-3" :src="icon.icon_buy" alt="icon-social" >
+                            <a href="">{{ icon.testo }}</a></li>
+                    </ul>
+                </div>        
+        </div>
+        </div>
     <div class="sfondo ">
         <div class="container">
             <div class="cont-img">
@@ -135,6 +168,7 @@ h3{
     color: white;
    
 }
+
 li{
     color: grey;
     list-style-type: none;
@@ -174,5 +208,24 @@ h4{
 }
 .justify-end{
     justify-content: end
+}
+.sfondo-azzurrino{
+    background-color: $primary_color;
+
+    a{
+        color: white
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        padding: 30px 0px
+    }
+    li{
+        margin: 10px
+    }
+    img{
+        width: 60px
+    }
 }
 </style>
