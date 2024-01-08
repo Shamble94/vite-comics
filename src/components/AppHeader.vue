@@ -3,6 +3,48 @@ export default{
     name: "AppHeader",
     data(){
       return{
+        nav_link:[
+            {
+                link: "CHARACTERS",
+                active: false
+            },
+            {
+                link: "COMICS",
+                active: true
+            },
+            {
+                link: "MOVIES",
+                active: false
+            },
+            {
+                link: "TV",
+                active: false
+            },
+            {
+                link: "GAMES",
+                active: false
+            },
+            {
+                link: "COLLECTIBLES",
+                active: false
+            },
+            {
+                link: "VIDEOS",
+                active: false
+            },
+            {
+                link: "FANS",
+                active: false
+            },
+            {
+                link: "NEWS",
+                active: false
+            },
+            {
+                link: "SHOP",
+                active: false
+            }
+        ]
 
       }
     }
@@ -10,7 +52,7 @@ export default{
 </script>
 <template lang="">
   <header>
-    <div class="container m-3">
+    <div class="container my-3">
       <div class="row">
         <div class="col-5">
           <a href="/">
@@ -19,16 +61,7 @@ export default{
         </div>   
         <div class="d-flex col-7 ">
           <ul>
-            <li>CHARACTERS</li>
-            <li class="active">COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li>
+            <li v-for= "(shop, index) in nav_link" :key="index">{{ shop.link }}</li>
           </ul>
         </div>
       </div>

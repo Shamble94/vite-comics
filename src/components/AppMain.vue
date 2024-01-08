@@ -9,12 +9,12 @@ export default{
 }
 </script>
 <template lang="">
-
-   
-        <div class="bg-nero">
+    <div class="bg-nero">
+        <div class="container">
+       
             <h3>Content goes here</h3>
         </div>
-   
+    </div>
 
 
 </template>
