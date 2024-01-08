@@ -59,9 +59,10 @@ export default{
             <img src="/dc-logo.png" alt="logo-dc" class="logo">
           </a>
         </div>   
-        <div class="d-flex col-7 ">
+        <div class="align-centro col-7 ">
           <ul>
-            <li v-for= "(shop, index) in nav_link" :key="index">{{ shop.link }}</li>
+            <li v-for= "(links, index) in nav_link" :key="index">
+              <a href="/" :class="links.active ? `active` : `` ">{{ links.link }}</a></li>
           </ul>
         </div>
       </div>
@@ -70,16 +71,20 @@ export default{
 </template>
 <style lang="scss" scoped>
     ul {
-      list-style-type: none;
+     
       display: flex;
-      li{
-        flex-direction: row;
+      li{ 
+        list-style-type: none;
         margin: 5px;
-        font-weight: 1000;
+        font-weight: 700;
         font-size: 15px
       }
+      a:hover{
+      color: blue;
+      border-bottom: 3px solid blue
     }
-    .d-flex{
+    }
+    .align-centro{
       display:flex;
       align-items: center;
     }
@@ -90,4 +95,9 @@ export default{
       color: blue;
       border-bottom:3px solid blue;
     }
+    a{
+      text-decoration: none;
+      color: black
+    }
+   
 </style>
