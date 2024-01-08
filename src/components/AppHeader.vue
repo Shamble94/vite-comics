@@ -3,6 +3,7 @@ export default{
     name: "AppHeader",
     data(){
       return{
+        /* ARRAY DEL NAV  */
         nav_link:[
             {
                 link: "CHARACTERS",
@@ -55,12 +56,15 @@ export default{
     <div class="container my-3">
       <div class="row">
         <div class="col-5">
+          <!-- LINK -->
           <a href="/">
             <img src="/dc-logo.png" alt="logo-dc" class="logo">
           </a>
-        </div>   
+        </div>
+        <!-- NAV CENTRATO ALL'INTERNO DI UNA COLONNA -->
         <div class="align-centro col-7 ">
           <ul>
+            <!-- CICLO V-FOR PER CREARE IL NAV PRENDENDO I DATI DALL'ARRAY NAV_LINK -->
             <li v-for= "(links, index) in nav_link" :key="index">
               <a href="/" :class="links.active ? `active` : `` ">{{ links.link }}</a></li>
           </ul>
@@ -71,6 +75,7 @@ export default{
 </template>
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
+    /* STILE UL, LI E A:HOVER */
     ul {
      
       display: flex;
@@ -84,19 +89,23 @@ export default{
       border-bottom: 3px solid $primary_color
     }
     }
+    /* ALLINEAMENTO CENTRALE */
     .align-centro{
       display:flex;
       align-items: center;
     }
+    /* DIMENSIONI LOGO */
     .logo{
       width: 100px;
     }
+    /* STILE ELEMENTO ACTIVE */
     .active{
       color: $primary_color;
       border-bottom:3px solid $primary_color;
     }
+    /* STILE TAG A */
     a{
-      text-decoration: none;
+      text-decoration: $decorazione-testo;
       color: black
     }
    

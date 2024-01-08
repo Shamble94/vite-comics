@@ -11,7 +11,7 @@ export default{
 <template lang="">
     <div class="bg-nero">
         <div class="container">
-       
+            <!-- TESTO PLACEHOLDER -->
             <h3>Content goes here</h3>
         </div>
     </div>
@@ -19,6 +19,7 @@ export default{
 
 </template>
 <style lang ="scss" scoped>
+/* COLORE BACKGROUND */
 .bg-nero{
     background-color: black;
     color: white;
