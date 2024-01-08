@@ -166,6 +166,8 @@ export default{
 /* IMG DI SFONDO */
 .img-sfondo{
     background-image: url("/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 /* LOGO CON POSITION ABSOLUTE */
