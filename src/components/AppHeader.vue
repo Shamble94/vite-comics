@@ -70,6 +70,7 @@ export default{
   </header>
 </template>
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
     ul {
      
       display: flex;
@@ -77,11 +78,10 @@ export default{
         list-style-type: none;
         margin: 5px;
         font-weight: 700;
-        font-size: 15px
       }
       a:hover{
-      color: blue;
-      border-bottom: 3px solid blue
+      color: $primary_color;
+      border-bottom: 3px solid $primary_color
     }
     }
     .align-centro{
@@ -92,8 +92,8 @@ export default{
       width: 100px;
     }
     .active{
-      color: blue;
-      border-bottom:3px solid blue;
+      color: $primary_color;
+      border-bottom:3px solid $primary_color;
     }
     a{
       text-decoration: none;

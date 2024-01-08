@@ -80,43 +80,48 @@ export default{
         <div class="container">
             <div class="cont-img">
                 <img src="/dc-logo-bg.png" alt="dc-logo" class="logo">
-
             </div>
+
             <div class="d-flex">
                 <ul> <h3 class="mt-3">DC COMICS</h3>
-                    <li v-for= "(link, index) in comics" :key="index">{{ link.label }}</li>
+                    <li v-for= "(link, index) in comics" :key="index">
+                        <a href="">{{ link.label }}</a></li>
                 </ul>
                 <ul><h3 class="mt-3">DC</h3>
-                    <li v-for= "(utility, index) in comics" :key="index">{{ utility.link_utili }}</li>
+                    <li v-for= "(utility, index) in comics" :key="index">
+                        <a href="">{{ utility.link_utili }}</a></li>
                 </ul>
                 <ul><h3 class="mt-3">SITES</h3>
-                    <li v-for= "(site, index) in comics" :key="index">{{ site.site }}</li>
+                    <li v-for= "(site, index) in comics" :key="index">
+                        <a href="">{{ site.site }}</a></li>
                 </ul>
             </div>
-            <div class= "my-3">
+
+            <div class= "pb-5">
                 <ul><h3 >SHOP</h3>
-                        <li v-for= "(shop, index) in comics" :key="index">{{ shop.shop }}</li>
+                        <li v-for= "(shop, index) in comics" :key="index">
+                            <a href="">{{ shop.shop }}</a></li>
                     </ul>
 
             </div>
-    
         </div>
     </div>
     <div class="bg-grigio">
         <div class="container dis-flex">
-            <div class="col-1">
-                <button>SIGN UP</button>
+            <div class="col-2 my-3">
+                <button class="my-2">SIGN-UP NOW!</button>
             </div>
        
-            <div class=" col-11 justify-end">
-                <ul  class="d-flex"> FOLLOW US
-                    <li class= "mx-2" v-for= "(icons, index) in social" :key="index"><img :src="icons.icon" alt=""></li>
+            <div class=" col-10 d-flex justify-end">
+                <ul  class="d-flex"> <h4>FOLLOW US</h4>
+                    <li class= "mx-2" v-for= "(icons, index) in social" :key="index"><img :src="icons.icon" alt="icon-social" ></li>
                 </ul>
             </div>
         </div>
     </div>
 </template>
 <style lang ="scss" scoped>
+@use "../styles/partials/variables" as *;
 .sfondo{
     background-image: url("/footer-bg.jpg");
     position: relative;
@@ -135,15 +140,21 @@ li{
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
+    a{
+        text-decoration: none;
+        color: grey
+    }
+    a:hover{
+        color:white
+    }
 }
 .bg-grigio {
-    background-color: grey;
+    background-color: rgba(48,48,48,255);
 }
 button{
-    margin: 10px;
-    padding: 10px;
-    background-color: grey;
-    border-color: blue;
+    padding: 15px;
+    background-color: rgba(48,48,48,255);
+    border-color: $primary_color;
     color: white
 }
 .cont-img{
@@ -158,5 +169,10 @@ ul{
     display: flex;
     align-items: center;
 }
-
+h4{
+    color: $primary_color
+}
+.justify-end{
+    justify-content: end
+}
 </style>
