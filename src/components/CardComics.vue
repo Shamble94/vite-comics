@@ -8,13 +8,11 @@ export default{
 </script>
 
 <template lang="">
-  <div class="comics-container">
+  
     <div class ="comic_card mt-3"  :key="index">
       <img :src="comic.thumb" alt="">
       <h6>{{ comic.series }}</h6>
     </div>
-
-  </div>
 </template>
 <style lang ="scss" scoped>
 @use "../styles/partials/variables" as *;
@@ -24,8 +22,9 @@ export default{
   margin: 10px;
 
 }
-.comics-container{
- display: flex;
- flex-wrap: wrap;
+
+img{
+  width: 100%;
+  height: 60%
 }
 </style>

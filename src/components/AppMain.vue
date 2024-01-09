@@ -89,16 +89,17 @@ export default{
 <template lang="">
     <div class="bg-nero">
         <img src="/jumbotron.jpg" alt="" class="jumbo">
-        <div class="container">        
-            <button class= "btn btn-primary series">CURRENT SERIES</button>
-          
-                    <h3><CardComics v-for="comic, index in comics" :key="index" :comic="comic"/></h3>
+        <div class="container">   
+            <button class= "btn btn-primary series">CURRENT SERIES</button> 
+            <div class="comics-container">
+                
+                <CardComics v-for="comic, index in comics" :key="index" :comic="comic"/>
                     <div class="col-12">
-                        <div class="btn-container">
+                         <div class="btn-container">
                             <button class= "btn btn-primary">LOAD MORE</button>
                         </div>
-                    </div>
-               
+                    </div> 
+            </div>    
         </div>
     </div>
 
@@ -116,10 +117,7 @@ export default{
     width:100%;
     height: 300px;
 }
-img{
-  width: 100%;
-  height: 60%
-}
+
 .btn-container{
   margin-bottom: 10px;
   display: flex;
@@ -128,5 +126,9 @@ img{
 .series{
   margin-top: -40px;
   margin-left: 10px
+}
+.comics-container{
+ display: flex;
+ flex-wrap: wrap;
 }
 </style>
