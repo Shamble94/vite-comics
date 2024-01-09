@@ -118,30 +118,31 @@ export default{
         <div class="container">
             <!-- CONTAINER IMMAGINE DC-LOGO -->
             <div class="cont-img">
-                <img src="/dc-logo-bg.png" alt="dc-logo" class="logo">
-            </div>
-            <!-- LISTE CON I VARI LINK -->
-            <div class="d-flex">
-                <ul> <h3 class="mt-3">DC COMICS</h3>
-                    <li v-for= "(link, index) in comics" :key="index">
-                        <a href="">{{ link.label }}</a></li>
-                </ul>
-                <ul><h3 class="mt-3">DC</h3>
-                    <li v-for= "(utility, index) in comics" :key="index">
-                        <a href="">{{ utility.link_utili }}</a></li>
-                </ul>
-                <ul><h3 class="mt-3">SITES</h3>
-                    <li v-for= "(site, index) in comics" :key="index">
-                        <a href="">{{ site.site }}</a></li>
-                </ul>
-            </div>
-            <!-- LISTA SHOP SOTTOSTANTE -->
-            <div class= "pb-5">
-                <ul>
-                    <h3 >SHOP</h3>
-                    <li v-for= "(shop, index) in comics" :key="index">
-                        <a href="">{{ shop.shop }}</a></li>
-                </ul>
+                
+           
+                <!-- LISTE CON I VARI LINK -->
+                <div class="d-flex">
+                    <ul> <h3 class="mt-3">DC COMICS</h3>
+                        <li v-for= "(link, index) in comics" :key="index">
+                            <a href="">{{ link.label }}</a></li>
+                    </ul>
+                    <ul><h3 class="mt-3">DC</h3>
+                        <li v-for= "(utility, index) in comics" :key="index">
+                            <a href="">{{ utility.link_utili }}</a></li>
+                    </ul>
+                    <ul><h3 class="mt-3">SITES</h3>
+                        <li v-for= "(site, index) in comics" :key="index">
+                            <a href="">{{ site.site }}</a></li>
+                    </ul>
+                </div>
+                <!-- LISTA SHOP SOTTOSTANTE -->
+                <div class= "pb-5">
+                    <ul>
+                        <h3 >SHOP</h3>
+                        <li v-for= "(shop, index) in comics" :key="index">
+                            <a href="">{{ shop.shop }}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -215,8 +216,9 @@ button{
 
 /* CONTAINER LOGO DC */
 .cont-img{
-    display: flex;
-    justify-content: end;
+    background-image: url("/dc-logo-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 /* ANNULLAMENTO MARGINI DATI IN DEFAULT DA BOOTSTRAP*/
@@ -256,7 +258,7 @@ ul{
         width: 60px
     }
     img:hover{
-        width: 70px;
+        width: 65px;
         transition: 0.5s;
         
     }

@@ -86,7 +86,6 @@ export default{
       }
       a:hover{
       color: $primary_color;
-      border-bottom: 3px solid $primary_color
     }
     }
     /* ALLINEAMENTO CENTRALE */
@@ -97,16 +96,29 @@ export default{
     /* DIMENSIONI LOGO */
     .logo{
       width: 100px;
+    
     }
     /* STILE ELEMENTO ACTIVE */
     .active{
       color: $primary_color;
-      border-bottom:3px solid $primary_color;
+      border-bottom: 3px solid $primary_color;
+      
     }
     /* STILE TAG A */
     a{
       text-decoration: $decorazione-testo;
-      color: black
+      color: black;
+      /* position: relative;
+ */
+      /* &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: 3px;
+        background-color: $primary_color
+      } */
     }
    
 </style>
