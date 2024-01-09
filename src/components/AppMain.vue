@@ -88,7 +88,8 @@ export default{
 </script>
 <template lang="">
     <div class="bg-nero">
-        <img src="/jumbotron.jpg" alt="" class="jumbo">
+        <div class="jumbo"></div>
+        <!-- <img src="/jumbotron.jpg" alt="" class="jumbo"> -->
         <div class="container">   
             <button class= "btn btn-primary series">CURRENT SERIES</button> 
             <div class="comics-container">
@@ -114,8 +115,8 @@ export default{
 
 }
 .jumbo{
-    width:100%;
-    height: 300px;
+    background-image: url("/jumbotron.jpg");
+    height: 400px
 }
 
 .btn-container{
