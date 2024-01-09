@@ -85,12 +85,18 @@ export default{
 <template lang="">
   <div>
     <div class="container">
+      <button class= "btn btn-primary series">CURRENT SERIES</button>
       <div class="comics-container">
         <div class ="comic_card mt-3" v-for ="comic, index in comics" :key="index">
           <img :src="comic.thumb" alt="">
           <h6>{{ comic.series }}</h6>
         </div>
-        
+        <div class="col-12">
+          <div class="btn-container">
+            <button class= "btn btn-primary">LOAD MORE</button>
+          </div>
+          
+        </div>
         
       </div>
     </div>
@@ -106,10 +112,19 @@ export default{
 .comic_card{
   width: calc(100% / 6 - 20px);
   margin: 10px;
+
 }
 img{
   width: 100%;
-  height: 50%
+  height: 60%
 }
-
+.btn-container{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.series{
+  margin-top: -40px;
+  margin-left: 10px
+}
 </style>
