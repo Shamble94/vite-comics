@@ -190,6 +190,7 @@ li{
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
+ 
     /* STILE TAG A ALL'INTERNO DI LI */
     a{
         text-decoration: $decorazione-testo;

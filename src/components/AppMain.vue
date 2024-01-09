@@ -1,18 +1,24 @@
 <script>
+import CardComics from "./CardComics.vue"
 export default{
     name: "AppMain",
+    components: {
+        CardComics
+    },
     data(){
       return{
-
-      }
+      } 
     }
 }
+   
 </script>
 <template lang="">
     <div class="bg-nero">
+        <img src="/jumbotron.jpg" alt="" class="jumbo">
         <div class="container">
             <!-- TESTO PLACEHOLDER -->
-            <h3>Content goes here</h3>
+            <h3><CardComics/></h3>
+            
         </div>
     </div>
 
@@ -24,7 +30,12 @@ export default{
     background-color: black;
     color: white;
     align-items: center;
-    padding: 50px;
+    
 
 }
+.jumbo{
+    width:100%;
+    height: 300px;
+}
+
 </style>
